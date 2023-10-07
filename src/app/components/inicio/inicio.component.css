@@ -1,0 +1,17 @@
+.sin-padding{
+    padding: 0;
+}
+
+.inicio img{
+    width: 100vw;
+    height: 100vh;
+}
+
+.bienvenida{
+    background: #006FB9;
+    padding: 3rem 0;
+}
+
+.slider{
+    padding: 4rem 2rem;
+}

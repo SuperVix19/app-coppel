@@ -1,0 +1,46 @@
+<div class="seccion-inicio-sesion">
+    <div class="container-fluid sin-padding">
+        <div class="imagen d-flex justify-content-center">
+            <img src="./assets/img/Logo-coppel.png" alt="Logo Coppel">
+        </div>
+
+        <div class="formulario-inicio">
+            <div class="titulo-inicio d-flex justify-content-center">
+                <h1>¡Hola de nuevo!</h1>
+            </div>
+    
+            <div class="formulario pt-2">
+                <form (submit)="inicioSesion()">
+                    <div class="form-floating mb-4">
+                        <input type="email" [ngModel]="user.email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Correo electónico</label>
+                    </div>
+    
+                    <div class="form-floating mb-4">
+                        <input type="password" [ngModel]="user.password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+                        <label for="floatingPassword">Contraseña</label>
+                    </div>
+    
+                    <div class="mb-4 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                  </form>
+            </div>
+    
+            <div class="registro pt-4">
+                <div class="titulo-registro d-flex justify-content-center">
+                    <h1><strong>¿Eres nuevo en Coppel.com?</strong></h1>
+                </div>
+    
+                <div class="boton-registro">
+                    <a class="btn" routerLink="/registro" role="button">Crea tu cuenta</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

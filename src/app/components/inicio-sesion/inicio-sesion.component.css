@@ -1,0 +1,71 @@
+.sin-padding{
+    padding: 0;
+}
+
+.imagen img{
+    width: 350px;
+}
+
+.seccion-inicio-sesion{
+    background: #f3f3f3;
+    padding: 1rem 0;
+    height: 100vh;
+}
+
+.formulario-inicio{
+    background: #fff;
+    margin: 0;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px 0 #D6D6D6;
+    margin: 0 35rem;
+}
+
+.formulario-inicio .titulo-inicio h1{
+    color: #000;
+    font-size: 25px;
+}
+
+button{
+    width: 100%;
+    font-size: 15px;
+    padding: 13px;
+    background: #016db6 !important;
+    border: 1px solid #016db6 !important;
+    color: #fff;
+    border-radius: 8px;
+  transition: background-color .15s;
+}
+
+button:hover{
+    background: #1C5C95 !important;
+    cursor: pointer;
+}
+
+.form-control:focus {
+    color: none;
+    background-color: none;
+    border-color: none;
+    outline: 0;
+    box-shadow: none;
+}
+
+.registro .titulo-registro h1{
+    font-size: 20px;
+}
+
+.boton-registro a{
+    width: 100%;
+    padding: 13px;
+    font-size: 15px;
+    border: 1px solid #006FB9;
+    background-color: #fff;
+    font-weight: 500;
+    color: #006FB9;
+    cursor: pointer;
+}
+
+.boton-registro a:hover{
+    background-color: #006FB9;
+    color: #fff;
+}
