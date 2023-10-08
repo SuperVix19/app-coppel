@@ -5,12 +5,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { InicioSesionComponent } from './components/inicio-sesion/inicio-sesion.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: '/inicio-sesion', pathMatch: 'full' },
   { path: 'inicio-sesion', component: InicioSesionComponent },
   { path: 'registro', component: RegistroComponent},
-  { path: 'inicio', component: InicioComponent},
+  { path: 'inicio', component: InicioComponent, canActivate:[AuthGuard]},
 ];
 
 @NgModule({
