@@ -69,3 +69,23 @@ button:hover{
 .titulo-registro a:hover{
     text-decoration: underline;
 }
+
+.form-check button{
+    width: 100%;
+    font-size: 15px;
+    padding: 0;
+    background: transparent!important;
+    border: 0!important;
+    color: #006FB9;
+    border-radius: 0!important;
+    transition: background-color .15s;
+}
+
+.form-check button:hover{
+    width: 100%;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    text-decoration: underline;
+}

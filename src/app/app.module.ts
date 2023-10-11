@@ -29,7 +29,7 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
     AuthService,
     AuthGuard,
 
-    {provide: HTTP_INTERCEPTORS, useClass: TokenInterceptorService}
+    {provide: HTTP_INTERCEPTORS, useClass: TokenInterceptorService, multi : true}
   ],
   bootstrap: [AppComponent]
 })

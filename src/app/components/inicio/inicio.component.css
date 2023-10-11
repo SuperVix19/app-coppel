@@ -7,11 +7,70 @@
     height: 100vh;
 }
 
-.bienvenida{
-    background: #006FB9;
-    padding: 3rem 0;
+.contenedor{
+    background: #edeef2;
+    padding: 0 0 5rem;
+}
+
+.navbar{
+    background: #FFDD2F;
+    padding: 0.5rem 0;
+}
+
+.navbar button{
+    background: #016db6;
+    border-radius: 0;
+}
+
+.form-control {
+    padding: 0.5rem 2rem;
+    border-radius: 0;
+}
+
+.navbar a img{
+    width: 200px;
+}
+
+.bienvenida h1{
+    font-size: 20px;
 }
 
 .slider{
     padding: 4rem 2rem;
+}
+
+.img1 img{
+    width: 266px;
+}
+
+.cards .titulo-cards h1{
+    font-size: 25px;
+}
+
+.cards .card-group .card {
+    border-radius: 10px;
+    margin: 0 0.5rem;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.cards .card-group .card img{
+    width: 50px;
+}
+
+.cards .card-group .card .card-body h5{
+    font-size: 15px;
+}
+
+.cards .card-group .card .card-body p{
+    font-size: 14px;
+    color: #ab2228;
+}
+
+.promos .img-promo1 img{
+    width: 800px;
+}
+
+.promos .img-promo img{
+    width: 400px;
 }

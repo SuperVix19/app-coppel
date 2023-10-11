@@ -12,14 +12,14 @@
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="form-floating mb-4">
-                                    <input type="text" [(ngModel)]="user.firstName" class="form-control" id="floatingInput" placeholder="Nombre(s)">
+                                    <input type="text" [(ngModel)]="user.firstName" name="firstName" class="form-control" id="floatingInput" placeholder="Nombre(s)" required>
                                     <label for="floatingInput">Nombre(s)*</label>
                                 </div>
                             </div>
 
                             <div class="col-xl-6">
                                 <div class="form-floating mb-4">
-                                    <input type="text" [(ngModel)]="user.lastName" class="form-control" id="floatingInput" placeholder="Apellidos">
+                                    <input type="text" [(ngModel)]="user.lastName" name="lastName" class="form-control" id="floatingInput" placeholder="Apellidos" required="">
                                     <label for="floatingInput">Apellidos*</label>
                                 </div>
                             </div>
@@ -27,21 +27,24 @@
                     </div>
 
                     <div class="form-floating mb-4">
-                        <input type="email" [(ngModel)]="user.email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <input type="email" [(ngModel)]="user.email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com" required="">
                         <label for="floatingInput">Correo electónico*</label>
                     </div>
     
                     <div class="form-floating mb-4">
-                        <input type="password" [(ngModel)]="user.password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+                        <input type="password" [(ngModel)]="user.password" name="password" class="form-control" id="floatingPassword" placeholder="Contraseña" required="">
                         <label for="floatingPassword">Contraseña*</label>
                     </div>
 
                     <div class="form-check pb-3">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">He leído y acepto los Términos y condiciones y el Aviso de privacidad.</label>
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required="true">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            He leído y acepto los Términos y condiciones y el 
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Aviso de privacidad.</button>
+                        </label>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Crea tu cuenta</button>
+                    <button type="submit" class="btn btn-primary" (click)="register()">Crea tu cuenta</button>
                 </form>
             </div>
 
@@ -57,26 +60,30 @@
     </div>
 </div>
 
-
-<!-- Modal de Bootstrap -->
-<div class="modal fade" id="privacyModal" tabindex="-1" role="dialog" aria-labelledby="privacyModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="privacyModalLabel">Aviso de Privacidad</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
         <div class="modal-body">
-          <!-- Contenido de tu aviso de privacidad aquí -->
-          <p>Este es el aviso de privacidad de nuestra tienda departamental.</p>
-          <p>Tu información personal será tratada con confidencialidad...</p>
-          <!-- Puedes agregar más contenido aquí -->
+            De conformidad con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (en lo sucesivo, la “Ley” o la “LFPDPPP”), el Reglamento de la Ley (el “Reglamento”) y los Lineamientos del Aviso de Privacidad (los “Lineamientos”), entre otras disposiciones aplicables y vigentes en los Estados Unidos Mexicanos (“México”), ponemos a disposición del titular de datos personales el siguiente: 
+            <br>
+            <strong>AVISO DE PRIVACIDAD (INTEGRAL) DESTINADO PARA CLIENTES</strong>
+            <br>
+            <strong>
+                I. Identidad y domicilio del responsable del tratamiento de los datos personales.
+            </strong>
+            <br>
+            En su carácter de Titular, le informamos los términos y condiciones bajo las cuales Coppel, S.A. de C.V. (en lo sucesivo “Coppel” o el “Responsable”) llevará a cabo el tratamiento de los datos personales que usted nos proporcione y se encuentren bajo nuestro control y ámbito de decisión razonable, así como la forma y los medios bajo los cuales podrá ejercer sus derechos a la privacidad, a ejercer control sobre sus datos personales y a la protección de los mismos, en apego a la Ley, el Reglamento, los Lineamientos y demás disposiciones aplicables.
+            <br>
+            De la misma forma le informamos que durante el tratamiento de los datos personales que usted nos proporcione estableceremos las medidas necesarias para cumplir con los principios de licitud, calidad, consentimiento, información, finalidad, lealtad, proporcionalidad y responsabilidad que marca la Ley y el Reglamento.
+            <br>
+            El domicilio de Coppel, para todos los efectos aplicables al presente Aviso de Privacidad y demás cuestiones relacionadas con el mismo, se encuentra ubicado en República No. 2855 Poniente Colonia Recursos Hidráulicos, Código Postal 80105, en la ciudad de Culiacán, Sinaloa. 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Aceptar</button>
         </div>
       </div>
-    </div>
+    </div>
   </div>
+  
+

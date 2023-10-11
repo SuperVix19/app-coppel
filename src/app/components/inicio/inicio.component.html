@@ -1,42 +1,202 @@
-<div class="container-fluid sin-padding">
-    <div class="bienvenida d-flex justify-content-center">
-        <h1>Bienvenido </h1>
-    </div>
+<header>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="./assets/img/logo.svg" alt=""></a>
 
-    <div class="inicio">
-        <img src="./assets/img/slider1.avif" alt="">
-    </div>
-</div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-<div class="container">
-    <div class="slider">
-        <div class="row justify-content-center">
-            <div class="col-xl-8">
-                <div id="carouselExampleFade" class="carousel slide carousel-fade">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active d-flex justify-content-center">
-                        <img src="./assets/img/slider2.avif" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item d-flex justify-content-center">
-                        <img src="./assets/img/slider3.avif" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item d-flex justify-content-center">
-                        <img src="./assets/img/slider4.avif" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item d-flex justify-content-center">
-                        <img src="./assets/img/slider5.avif" class="d-block w-100" alt="...">
-                      </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <form class="d-flex" role="search">
+                    <input class="form-control" type="search" placeholder="Busca tus productos" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">
+                        <img src="../assets/img/lupa.png" alt="">
+                    </button>
+                </form>
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page">Bienvenido</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" (click)="cerrarSesion()">Cerrar sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="contenedor container-fluid">
+    <div class="container">
+        <div class="slider">
+            <div class="row justify-content-center">
+                <div class="col-xl-8">
+                    <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active d-flex justify-content-center">
+                            <img src="./assets/img/slider1.avif" class="d-block w-100" alt="...">
+                          </div>
+    
+                          <div class="carousel-item active d-flex justify-content-center">
+                            <img src="./assets/img/slider2.avif" class="d-block w-100" alt="...">
+                          </div>
+    
+                          <div class="carousel-item d-flex justify-content-center">
+                            <img src="./assets/img/slider3.avif" class="d-block w-100" alt="...">
+                          </div>
+    
+                          <div class="carousel-item d-flex justify-content-center">
+                            <img src="./assets/img/slider4.avif" class="d-block w-100" alt="...">
+                          </div>
+    
+                          <div class="carousel-item d-flex justify-content-center">
+                            <img src="./assets/img/slider5.avif" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-xl-4">
+                    <div class="img1 d-flex justify-content-center pb-1">
+                        <img src="./assets/img/img1.avif" alt="">
+                    </div>
+    
+                    <div class="img1 d-flex justify-content-center pt-1">
+                        <img src="./assets/img/img2.avif" alt="">
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="col-xl-4">
-                <div class="img1 d-flex justify-content-center">
-                    <img src="./assets/img/img1.avif" class="w-75" alt="">
+        <div class="cards">
+            <div class="titulo-cards pb-3">
+                <h1><strong>Todos los departamentos</strong></h1>
+            </div>
+
+            <div class="card-group">
+                <div class="card">
+                    <div class="imagen d-flex justify-content-center">
+                        <img src="./assets/img/joyeria.svg" class="card-img-top" alt="...">
+                    </div>
+
+                    <div class="card-body d-flex justify-content-center">
+                        <h5 class="card-title">Relojes, Lentes y Joyería</h5>
+                    </div>
+
+                    <div class="card-body d-flex justify-content-center">
+                        <p class="card-text">Hasta 40%</p>
+                    </div>
                 </div>
 
-                <div class="img1 d-flex justify-content-center">
-                    <img src="./assets/img/img2.avif"  class="w-75" alt="">
+                <div class="card">
+                    <div class="imagen d-flex justify-content-center">
+                        <img src="./assets/img/hogar.svg" class="card-img-top" alt="...">
+                    </div>
+
+                    <div class="card-body d-flex justify-content-center">
+                        <h5 class="card-title">Hogar y Muebles</h5>
+                    </div>
+
+                    <div class="card-body d-flex justify-content-center">
+                        <p class="card-text">Hasta 50%</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="imagen d-flex justify-content-center">
+                        <img src="./assets/img/zapatos.svg" class="card-img-top" alt="...">
+                    </div>
+
+                    <div class="card-body d-flex justify-content-center">
+                        <h5 class="card-title">Zapatos</h5>
+                    </div>
+
+                    <div class="card-body d-flex justify-content-center">
+                        <p class="card-text">Hasta 50%</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="imagen d-flex justify-content-center">
+                        <img src="./assets/img/electronica.svg" class="card-img-top" alt="...">
+                    </div>
+
+                    <div class="card-body d-flex justify-content-center">
+                        <h5 class="card-title">Electrónica</h5>
+                    </div>
+
+                    <div class="card-body d-flex justify-content-center">
+                        <p class="card-text">Hasta 40%</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="imagen d-flex justify-content-center">
+                        <img src="./assets/img/celulares.svg" class="card-img-top" alt="...">
+                    </div>
+
+                    <div class="card-body d-flex justify-content-center">
+                        <h5 class="card-title">Celulares</h5>
+                    </div>
+
+                    <div class="card-body d-flex justify-content-center">
+                        <p class="card-text">Hasta 30%</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="imagen d-flex justify-content-center">
+                        <img src="./assets/img/mujeres.svg" class="card-img-top" alt="...">
+                    </div>
+
+                    <div class="card-body d-flex justify-content-center">
+                        <h5 class="card-title">Mujeres</h5>
+                    </div>
+
+                    <div class="card-body d-flex justify-content-center">
+                        <p class="card-text">Hasta 50%</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="imagen d-flex justify-content-center">
+                        <img src="./assets/img/lineablanca.svg" class="card-img-top" alt="...">
+                    </div>
+
+                    <div class="card-body d-flex justify-content-center">
+                        <h5 class="card-title">Línea Blanca</h5>
+                    </div>
+
+                    <div class="card-body d-flex justify-content-center">
+                        <p class="card-text">Hasta 35%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="imagen-promo pt-5 pb-5">
+            <img src="./assets/img/promocion.avif" class="w-100" alt="">
+        </div>
+
+        <div class="promos">
+            <div class="row">
+                <div class="col-xl-8">
+                    <div class="img-promo1">
+                        <img src="./assets/img/promo1.avif" alt="">
+                    </div>
+                </div>
+
+                <div class="col-xl-4">
+                    <div class="img-promo pb-2">
+                        <img src="./assets/img/promo2.avif" alt="">
+                    </div>
+
+                    <div class="img-promo pt-2">
+                        <img src="./assets/img/promo3.avif" alt="">
+                    </div>
                 </div>
             </div>
         </div>
