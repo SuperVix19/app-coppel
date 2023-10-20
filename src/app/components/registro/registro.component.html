@@ -36,11 +36,11 @@
                         <label for="floatingPassword">Contraseña*</label>
                     </div>
 
-                    <div class="form-check pb-3">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required="true">
+                    <div class="form-check pb-3" id="checkbox">
+                        <input type="checkbox" [(ngModel)]="user.terminosCondiciones" name="checkbox" class="form-check-input" value="" id="flexCheckDefault" required="true">
                         <label class="form-check-label" for="flexCheckDefault">
                             He leído y acepto los Términos y condiciones y el 
-                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Aviso de privacidad.</button>
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Aviso de privacidad.</button>
                         </label>
                     </div>
 
@@ -61,7 +61,7 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-body">

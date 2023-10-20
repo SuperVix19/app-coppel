@@ -74,3 +74,15 @@
 .promos .img-promo img{
     width: 400px;
 }
+
+.navbar-nav .nav-item .cerrar{
+    cursor: pointer;
+}
+
+.navbar-nav .nav-item .cerrar:hover{
+    color: #016db6;
+}
+
+.navbar-nav{
+    padding-left: 48rem;
+}

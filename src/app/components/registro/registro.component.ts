@@ -16,6 +16,7 @@ export class RegistroComponent implements OnInit {
     lastName: '',
     email: '',
     password: '',
+    terminosCondiciones: false,
   }
 
   
@@ -27,25 +28,35 @@ export class RegistroComponent implements OnInit {
   
   register() {
     var miFormulario = this.formBuilder.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.min(18)]]
+      firstName: [this.user.firstName, Validators.required],
+      lastName: [this.user.lastName, Validators.required],
+      email: [this.user.email, [Validators.required, Validators.email]],
+      password: [this.user.password, [Validators.required, Validators.min(7)]],
+      terminosCondiciones: [this.user.terminosCondiciones, Validators.requiredTrue]
     })
-    
-    if (miFormulario.value.firstName == "" || miFormulario.value.lastName == "" || miFormulario.value.email == "" || miFormulario.value.password == ""){
+
+    if (miFormulario.value.firstName == "" || miFormulario.value.lastName == "" || miFormulario.value.email == "" || miFormulario.value.password == "" || miFormulario.value.terminosCondiciones == false){
       Swal.fire(
         'Ingrese todos los campos',
-        'Llene todos los campos obligatorios',
+        'Llene y/o seleccione todos los campos obligatorios',
         'warning'
-      )
-    }else{
-      this.authService.registro(this.user).subscribe(
-        (res: any) => {
-          localStorage.setItem('token', res.token);
-          this.router.navigate(['/inicio']);
+        )
+        
+      }else{
+        this.authService.registro(this.user).subscribe(
+          (res: any) => {
+            localStorage.setItem('token', res.token);
+            this.router.navigate(['/inicio']);
+          }
+        )
+
+        if(miFormulario.value.email == this.user.email){
+          Swal.fire(
+            'Correo existente',
+            'El correo ya existe, ingrese otro correo',
+            'warning'
+          ) 
         }
-      )
     }
   }
     
