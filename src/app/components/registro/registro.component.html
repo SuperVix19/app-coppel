@@ -35,6 +35,11 @@
                         <input type="password" [(ngModel)]="user.password" name="password" class="form-control" id="floatingPassword" placeholder="Contraseña" required="">
                         <label for="floatingPassword">Contraseña*</label>
                     </div>
+    
+                    <div class="form-floating mb-4">
+                        <input type="tel" [(ngModel)]="user.phoneNumber" pattern="[0-9]{10}"  name="phoneNumber" class="form-control" id="floatingphoneNumber" placeholder="Número de teléfono" required="">
+                        <label for="floatingPhoneNumber">Número de teléfono*</label>
+                    </div>
 
                     <div class="form-check pb-3" id="checkbox">
                         <input type="checkbox" [(ngModel)]="user.terminosCondiciones" name="checkbox" class="form-check-input" value="" id="flexCheckDefault" required="true">
@@ -43,8 +48,24 @@
                             <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Aviso de privacidad.</button>
                         </label>
                     </div>
+                    
+                    <div class="form-check pb-3" id="typeOfPassword">
+                        <input type="radio" [(ngModel)]="user.typeOfPassword" name="typeOfPassword" class="form-check-input" value="simetrico" id="typeOfPassword" required="true">
+                        <label class="form-check-label" for="typeOfPassword">
+                            Contraseña Simétrica
+                        </label>
+                    </div>
 
-                    <button type="submit" class="btn btn-primary" (click)="register()">Crea tu cuenta</button>
+                    <div class="form-check pb-3" id="typeOfPassword">
+                        <input type="radio" [(ngModel)]="user.typeOfPassword" name="typeOfPassword" class="form-check-input" value="asimetrico" id="typeOfPassword" required="true">
+                        <label class="form-check-label" for="typeOfPassword">
+                            Contraseña Asimétrica
+                        </label>
+                    </div>
+
+
+
+                    <button type="submit" class="btn btn-primary">Crea tu cuenta</button>
                 </form>
             </div>
 
@@ -85,5 +106,5 @@
       </div>
     </div>
   </div>
-  
+
 

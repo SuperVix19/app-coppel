@@ -26,6 +26,20 @@
                       <label class="form-check-label" for="exampleCheck1">Recordarme</label>
                     </div>
 
+                    <div class="form-check pb-3" id="typeOfPassword">
+                        <input type="radio" [(ngModel)]="user.typeOfPassword" name="checkbox" class="form-check-input" value="simetrico" id="typeOfPassword" required="true">
+                        <label class="form-check-label" for="typeOfPassword">
+                            Contraseña Simétrica
+                        </label>
+                    </div>
+
+                    <div class="form-check pb-3" id="typeOfPassword">
+                        <input type="radio" [(ngModel)]="user.typeOfPassword" name="checkbox" class="form-check-input" value="asimetrico" id="typeOfPassword" required="true">
+                        <label class="form-check-label" for="typeOfPassword">
+                            Contraseña Asimétrica
+                        </label>
+                    </div>
+
                     <button type="submit" class="btn btn-primary">Iniciar sesión</button>
                   </form>
             </div>

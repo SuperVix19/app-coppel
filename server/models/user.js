@@ -9,6 +9,11 @@ const userSchema = new Schema({
         type: String,
         required: true,
     },
+    phoneNumber: {
+        type: Number,
+        required: true,
+        minLength: 10,
+    },
     email: {
         type: String,
         required: true,
@@ -18,7 +23,7 @@ const userSchema = new Schema({
     password: {
         type: String,
         required: true,
-        minLength: 7
+        minLength: 10
     },
 }, 
 {
