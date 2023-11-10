@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 
 export class AuthService {
 
-  private url = 'http://localhost:3000/api'
+  private url = 'https://app-coppel-api.onrender.com/api'
 
 
   constructor(private http: HttpClient, private router: Router) { }
